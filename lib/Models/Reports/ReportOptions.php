@@ -166,9 +166,10 @@ class ReportOptions implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        return [];
+//         $invalidProperties = parent::listInvalidProperties();
 
-        return $invalidProperties;
+//         return $invalidProperties;
     }
 
     /**
