@@ -167,9 +167,10 @@ class PaymentExecutionDetailItemList implements ModelInterface, ArrayAccess, Ite
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        return [];
+//         $invalidProperties = parent::listInvalidProperties();
 
-        return $invalidProperties;
+//         return $invalidProperties;
     }
 
     /**
