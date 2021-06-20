@@ -76,9 +76,7 @@ class CreateUnexpectedProblemRequest implements ModelInterface, ArrayAccess
      *
      * @var string[]
      */
-    protected static $setters = [
-        'text' => 'setText'
-    ];
+    protected static $setters = ['text' => 'setText'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
@@ -176,9 +174,9 @@ class CreateUnexpectedProblemRequest implements ModelInterface, ArrayAccess
     /**
      * Gets text.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification
+     * @return string
      */
-    public function getResourceSpecification()
+    public function getText()
     {
         return $this->container['text'];
     }
@@ -186,11 +184,11 @@ class CreateUnexpectedProblemRequest implements ModelInterface, ArrayAccess
     /**
      * Sets text.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\DestinationResourceSpecification $text text
+     * @param string $text text
      *
      * @return $this
      */
-    public function setResourceSpecification($text)
+    public function setText($text)
     {
         $this->container['text'] = $text;
 
