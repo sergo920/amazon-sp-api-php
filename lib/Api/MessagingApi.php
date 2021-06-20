@@ -21,7 +21,7 @@ namespace ClouSale\AmazonSellingPartnerAPI\Api;
 use ClouSale\AmazonSellingPartnerAPI\Configuration;
 use ClouSale\AmazonSellingPartnerAPI\HeaderSelector;
 use ClouSale\AmazonSellingPartnerAPI\Helpers\SellingPartnerApiRequest;
-use ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\CreateUnexpectedProblemResponse;
+use ClouSale\AmazonSellingPartnerAPI\Models\Messaging\CreateUnexpectedProblemResponse;
 use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 use ClouSale\AmazonSellingPartnerAPI\ExceptionThrower;
 use GuzzleHttp\Client;
@@ -32,7 +32,7 @@ use GuzzleHttp\ClientInterface;
  *
  * @author   Stefan Neuhaus / ClouSale
  */
-class MessagingApi
+    class MessagingApi
 {
     use SellingPartnerApiRequest;
 
@@ -69,7 +69,7 @@ class MessagingApi
     /**
      * Operation createDestination.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\CreateUnexpectedProblemRequest $body body (required)
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Messaging\CreateUnexpectedProblemRequest $body body (required)
      *
      * @throws \InvalidArgumentException
      * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
@@ -86,7 +86,7 @@ class MessagingApi
     /**
      * Operation createDestinationWithHttpInfo.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\CreateUnexpectedProblemRequest $body (required)
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Messaging\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \InvalidArgumentException
      * @throws \ClouSale\AmazonSellingPartnerAPI\ApiException on non-2xx response
@@ -103,7 +103,7 @@ class MessagingApi
     /**
      * Create request for operation 'createUnexpectedProblemRequest'.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\CreateUnexpectedProblemRequest $body (required)
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Messaging\CreateUnexpectedProblemRequest $body (required)
      *
      * @throws \InvalidArgumentException
      *
