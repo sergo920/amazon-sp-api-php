@@ -155,6 +155,8 @@ class CreateUnexpectedProblemRequest implements ModelInterface, ArrayAccess
 
         if (empty($this->container['text'])) {
             $invalidProperties[] = "'text' can't be empty";
+        } else if (strlen($this->container['text']) > 2000) {
+            $invalidProperties[] = "'text' max length 2000";
         }
 
         return $invalidProperties;
