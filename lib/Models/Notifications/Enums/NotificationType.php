@@ -2,7 +2,6 @@
 
 namespace ClouSale\AmazonSellingPartnerAPI\Models\Notifications\Enums;
 
-
 /**
  * @link https://github.com/amzn/selling-partner-api-docs/blob/main/references/notifications-api/notifications.md#notificationtype
  *
