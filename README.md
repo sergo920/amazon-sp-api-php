@@ -120,10 +120,6 @@ echo $result->getPayload()->getAttributeSets()[0]->getTitle(); // Never Gonna Gi
 
 Feature Requests & Pull Requests are very welcome!
 
-# Notes
-
-If you are looking for a complete Repricing & FBA-Reimbursement solution, you might want to consider giving [ClouSale.com](https://www.clousale.com) a shot.
-
 # Thanks
 
 Thanks go out to everybody who added PRs and worked on this package.
