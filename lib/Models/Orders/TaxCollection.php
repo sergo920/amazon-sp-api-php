@@ -198,25 +198,26 @@ class TaxCollection implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        return [];
+//         $invalidProperties = [];
 
-        $allowedValues = $this->getModelAllowableValues();
-        if (!is_null($this->container['model']) && !in_array($this->container['model'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'model', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//         $allowedValues = $this->getModelAllowableValues();
+//         if (!is_null($this->container['model']) && !in_array($this->container['model'], $allowedValues, true)) {
+//             $invalidProperties[] = sprintf(
+//                 "invalid value for 'model', must be one of '%s'",
+//                 implode("', '", $allowedValues)
+//             );
+//         }
 
-        $allowedValues = $this->getResponsiblePartyAllowableValues();
-        if (!is_null($this->container['responsible_party']) && !in_array($this->container['responsible_party'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'responsible_party', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//         $allowedValues = $this->getResponsiblePartyAllowableValues();
+//         if (!is_null($this->container['responsible_party']) && !in_array($this->container['responsible_party'], $allowedValues, true)) {
+//             $invalidProperties[] = sprintf(
+//                 "invalid value for 'responsible_party', must be one of '%s'",
+//                 implode("', '", $allowedValues)
+//             );
+//         }
 
-        return $invalidProperties;
+//         return $invalidProperties;
     }
 
     /**
