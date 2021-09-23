@@ -249,12 +249,11 @@ class TaxCollection implements ModelInterface, ArrayAccess
      */
     public function setModel($model)
     {
-        $allowedValues = $this->getModelAllowableValues();
-        if (!is_null($model) && !in_array($model, $allowedValues, true)) {
-            throw new \InvalidArgumentException(sprintf("Invalid value for 'model', must be one of '%s'", implode("', '", $allowedValues)));
-        }
+//         $allowedValues = $this->getModelAllowableValues();
+//         if (!is_null($model) && !in_array($model, $allowedValues, true)) {
+//             throw new \InvalidArgumentException(sprintf("Invalid value for 'model', must be one of '%s'", implode("', '", $allowedValues)));
+//         }
         $this->container['model'] = $model;
-
         return $this;
     }
 
