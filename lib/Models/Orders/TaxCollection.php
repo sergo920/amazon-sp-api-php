@@ -277,10 +277,10 @@ class TaxCollection implements ModelInterface, ArrayAccess
      */
     public function setResponsibleParty($responsible_party)
     {
-        $allowedValues = $this->getResponsiblePartyAllowableValues();
-        if (!is_null($responsible_party) && !in_array($responsible_party, $allowedValues, true)) {
-            throw new \InvalidArgumentException(sprintf("Invalid value for 'responsible_party', must be one of '%s'", implode("', '", $allowedValues)));
-        }
+//         $allowedValues = $this->getResponsiblePartyAllowableValues();
+//         if (!is_null($responsible_party) && !in_array($responsible_party, $allowedValues, true)) {
+//             throw new \InvalidArgumentException(sprintf("Invalid value for 'responsible_party', must be one of '%s'", implode("', '", $allowedValues)));
+//         }
         $this->container['responsible_party'] = $responsible_party;
 
         return $this;
