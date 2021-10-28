@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateDestinationResponse.
+ * CreateNegativeFeedbackRemovalResponse.
  *
  * PHP version 5
  *
@@ -8,9 +8,7 @@
  */
 
 /**
- * Selling Partner API for Messaging.
- *
- * The Selling Partner API for Notifications lets you subscribe to notifications that are relevant to a selling partner's business. Using this API you can create a destination to receive notifications, subscribe to notifications, delete notification subscriptions, and more.
+ * Sends a non-critical message that asks a buyer to remove their negative feedback. This message should only be sent after the seller has resolved the buyer's problem.
  *
  * OpenAPI spec version: v1
  */
@@ -190,7 +188,7 @@ class CreateNegativeFeedbackRemovalResponse implements ModelInterface, ArrayAcce
     /**
      * Gets errors.
      *
-     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\ErrorList
+     * @return \ClouSale\AmazonSellingPartnerAPI\Models\Messaging\ErrorList
      */
     public function getErrors()
     {
@@ -200,7 +198,7 @@ class CreateNegativeFeedbackRemovalResponse implements ModelInterface, ArrayAcce
     /**
      * Sets errors.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Notifications\ErrorList $errors errors
+     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Messaging\ErrorList $errors errors
      *
      * @return $this
      */
