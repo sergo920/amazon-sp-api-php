@@ -10,7 +10,7 @@
  *
  * The Selling Partner API for Reports lets you retrieve and manage a variety of reports that can help selling partners manage their businesses.
  *
- * OpenAPI spec version: 2020-09-04
+ * OpenAPI spec version: 2021-06-30
  */
 
 namespace ClouSale\AmazonSellingPartnerAPI\Api;
@@ -42,6 +42,8 @@ use GuzzleHttp\Exception\RequestException;
 class ReportsApi
 {
     use SellingPartnerApiRequest;
+
+    protected $baseApiPath = '/reports/2021-06-30';
 
     /**
      * @var ClientInterface
@@ -159,7 +161,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_id when calling cancelReport');
         }
 
-        $resourcePath = '/reports/2020-09-04/reports/{reportId}';
+        $resourcePath = "$this->baseApiPath/reports/{reportId}";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -263,7 +265,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling cancelReportSchedule');
         }
 
-        $resourcePath = '/reports/2020-09-04/schedules/{reportScheduleId}';
+        $resourcePath = "$this->baseApiPath/schedules/{reportScheduleId}";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -368,7 +370,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $body when calling createReport');
         }
 
-        $resourcePath = '/reports/2020-09-04/reports';
+        $resourcePath = "$this->baseApiPath/reports";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -463,7 +465,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $body when calling createReportSchedule');
         }
 
-        $resourcePath = '/reports/2020-09-04/schedules';
+        $resourcePath = "$this->baseApiPath/schedules";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -558,7 +560,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_id when calling getReport');
         }
 
-        $resourcePath = '/reports/2020-09-04/reports/{reportId}';
+        $resourcePath = "$this->baseApiPath/reports/{reportId}";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -662,7 +664,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_document_id when calling getReportDocument');
         }
 
-        $resourcePath = '/reports/2020-09-04/documents/{reportDocumentId}';
+        $resourcePath = "$this->baseApiPath/documents/{reportDocumentId}";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -766,7 +768,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_schedule_id when calling getReportSchedule');
         }
 
-        $resourcePath = '/reports/2020-09-04/schedules/{reportScheduleId}';
+        $resourcePath = "$this->baseApiPath/schedules/{reportScheduleId}";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -977,7 +979,7 @@ class ReportsApi
             throw new \InvalidArgumentException('Missing the required parameter $report_types when calling getReportSchedules');
         }
 
-        $resourcePath = '/reports/2020-09-04/schedules';
+        $resourcePath = "$this->baseApiPath/schedules";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1106,7 +1108,7 @@ class ReportsApi
      */
     protected function getReportsRequest($report_types = null, $processing_statuses = null, $marketplace_ids = null, $page_size = '10', $created_since = null, $created_until = null, $next_token = null)
     {
-        $resourcePath = '/reports/2020-09-04/reports';
+        $resourcePath = "$this->baseApiPath/reports";
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
