@@ -1,6 +1,6 @@
 <?php
 /**
- * ListingsApi.
+ * CatalogApi.
  *
  * @author   Stefan Neuhaus / ClouSale
  */
@@ -74,9 +74,9 @@ class ListingsApi
      *
      * @return \ClouSale\AmazonSellingPartnerAPI\Models\Listings\GetListingItemResponse
      */
-    public function getListingsItem($marketplace_id, $sku, $sellerId)
+    public function getListingsItem($marketplace_id, $sku, $sellerId, $includedData=[])
     {
-        list($response) = $this->getListingsItemWithHttpInfo($marketplace_id, $sku, $sellerId);
+        list($response) = $this->getListingsItemWithHttpInfo($marketplace_id, $sku, $sellerId, $includedData);
 
         return $response;
     }
@@ -93,9 +93,9 @@ class ListingsApi
      *
      * @return array of \ClouSale\AmazonSellingPartnerAPI\Models\Listings\GetListingItemResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getListingsItemWithHttpInfo($marketplace_id, $sku, $sellerId)
+    public function getListingsItemWithHttpInfo($marketplace_id, $sku, $sellerId, $includedData=[])
     {
-        $request = $this->getListingsItemRequest($marketplace_id, $sku, $sellerId);
+        $request = $this->getListingsItemRequest($marketplace_id, $sku, $sellerId, $includedData);
 
         return $this->sendRequest($request, 'object');
     }
@@ -127,7 +127,7 @@ class ListingsApi
      * @param $sellerId
      * @return mixed
      */
-    protected function getListingsItemRequest($marketplace_id, $sku, $sellerId)
+    protected function getListingsItemRequest($marketplace_id, $sku, $sellerId, $includedData=[])
     {
         // verify the required parameter 'marketplace_id' is set
         if (null === $marketplace_id || (is_array($marketplace_id) && 0 === count($marketplace_id))) {
@@ -148,6 +148,9 @@ class ListingsApi
         // query params
         if (null !== $marketplace_id) {
             $queryParams['marketplaceIds'] = ObjectSerializer::toQueryValue($marketplace_id);
+        }
+        if (!empty($includedData)) {
+            $queryParams['includedData'] = ObjectSerializer::toQueryValue($includedData);
         }
 
         // path params
